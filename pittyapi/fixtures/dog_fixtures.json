@@ -1,0 +1,152 @@
+[
+    {
+        "model": "pittyapi.dog",
+        "pk": 1,
+        "fields": {
+            "name": "Buddy",
+            "age": 3,
+            "gender": "Male",
+            "color": "Brown and White",
+            "weight": 30.0,
+            "health_status": "Good",
+            "story": "Found wandering the streets.",
+            "adoption_status": "Available",
+            "arrival_date": "2024-01-01"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 2,
+        "fields": {
+            "name": "Luna",
+            "age": 2,
+            "gender": "Female",
+            "color": "Black",
+            "weight": 25.0,
+            "health_status": "Excellent",
+            "story": "Rescued from a shelter.",
+            "adoption_status": "Pending Adoption",
+            "arrival_date": "2024-02-15"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 3,
+        "fields": {
+            "name": "Max",
+            "age": 5,
+            "gender": "Male",
+            "color": "Golden Retriever",
+            "weight": 45.0,
+            "health_status": "Needs medical attention",
+            "story": "Owner surrendered due to allergies.",
+            "adoption_status": "Available",
+            "arrival_date": "2024-03-20"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 4,
+        "fields": {
+            "name": "Charlie",
+            "age": 1,
+            "gender": "Male",
+            "color": "Black Lab",
+            "weight": 60.0,
+            "health_status": "Healthy",
+            "story": "Donated by a family moving abroad.",
+            "adoption_status": "Pending Adoption",
+            "arrival_date": "2024-04-05"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 5,
+        "fields": {
+            "name": "Sophie",
+            "age": 4,
+            "gender": "Female",
+            "color": "Greyhound",
+            "weight": 70.0,
+            "health_status": "Minor injury",
+            "story": "Retired racing dog looking for a home.",
+            "adoption_status": "Available",
+            "arrival_date": "2024-05-10"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 6,
+        "fields": {
+            "name": "Rex",
+            "age": 8,
+            "gender": "Male",
+            "color": "German Shepherd",
+            "weight": 80.0,
+            "health_status": "Needs exercise",
+            "story": "Previous police K-9 now retired.",
+            "adoption_status": "Pending Adoption",
+            "arrival_date": "2024-06-15"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 7,
+        "fields": {
+            "name": "Mia",
+            "age": 6,
+            "gender": "Female",
+            "color": "Beagle",
+            "weight": 40.0,
+            "health_status": "Perfect",
+            "story": "Rescue from a high-kill shelter.",
+            "adoption_status": "Available",
+            "arrival_date": "2024-07-20"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 8,
+        "fields": {
+            "name": "Oscar",
+            "age": 10,
+            "gender": "Male",
+            "color": "Chihuahua",
+            "weight": 10.0,
+            "health_status": "Senior care needed",
+            "story": "Long-term resident at the shelter.",
+            "adoption_status": "Pending Adoption",
+            "arrival_date": "2024-08-05"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 9,
+        "fields": {
+            "name": "Bella",
+            "age": 3,
+            "gender": "Female",
+            "color": "Labrador",
+            "weight": 50.0,
+            "health_status": "Active",
+            "story": "Found in a park with her puppies.",
+            "adoption_status": "Available",
+            "arrival_date": "2024-09-10"
+        }
+    },
+    {
+        "model": "pittyapi.dog",
+        "pk": 10,
+        "fields": {
+            "name": "Rocky",
+            "age": 7,
+            "gender": "Male",
+            "color": "Boxer",
+            "weight": 65.0,
+            "health_status": "Needs training",
+            "story": "Returned by previous owners.",
+            "adoption_status": "Pending Adoption",
+            "arrival_date": "2024-10-15"
+        }
+    }
+]
