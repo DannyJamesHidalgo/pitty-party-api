@@ -36,9 +36,11 @@ class AdoptersViewSet(ViewSet):
         """
         adopter = Adopter.objects.get(user=request.auth.user)
         adopter.user.last_name = request.data["last_name"]
+        adopter.last_name = request.data["last_name"]
         adopter.user.first_name = request.data["first_name"]
+        adopter.first_name = request.data["first_name"]
         adopter.user.email = request.data["email"]
+        adopter.email = request.data["email"]
         adopter.user.save()
         adopter.save()
-
         return Response({}, status=status.HTTP_204_NO_CONTENT)
