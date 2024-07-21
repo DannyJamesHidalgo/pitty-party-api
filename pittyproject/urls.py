@@ -8,6 +8,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 
 router.register(r"users", Users, "user")
 router.register(r"adopters", AdoptersViewSet, "adopter")
+router.register(r"dogs", DogViewSet)
 
 
 urlpatterns = [

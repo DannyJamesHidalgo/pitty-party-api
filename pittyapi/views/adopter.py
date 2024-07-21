@@ -2,45 +2,56 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from rest_framework import status
+from rest_framework.decorators import action
+
+
 from pittyapi.models import Adopter
+from rest_framework import serializers, viewsets, status
 
 
-class AdopterSerializer(serializers.HyperlinkedModelSerializer):
+class AdopterSerializer(serializers.ModelSerializer):
     """JSON serializer for Adopters"""
 
     class Meta:
         model = Adopter
-        url = serializers.HyperlinkedIdentityField(
-            view_name="adopter", lookup_field="id"
-        )
-        fields = ("id", "url", "user", "email", "first_name", "last_name")
-        depth = 1
+        fields = "__all__"
 
 
 class AdoptersViewSet(ViewSet):
 
-    def update(self, request, pk=None):
-        """
-        @api {PUT} /adopters/:id PUT changes to Adopter profile
-        @apiName UpdateAdopter
-        @apiGroup Adopter
+    queryset = Adopter.objects.all()
+    serializer_class = AdopterSerializer
 
-        @apiHeader {String} Authorization Auth token
-        @apiHeaderExample {String} Authorization
-            Token 9ba45f09651c5b0c404f37a2d2572c026c146611
+    def update(self, request, *args, **kwargs):
+        response = super().update(request, *args, **kwargs)
+        return Response(response.data, status=status.HTTP_200_OK)
 
-        @apiParam {id} id Adopter Id to update
-        @apiSuccessExample {json} Success
-            HTTP/1.1 204 No Content
+    def partial_update(self, request, *args, **kwargs):
+        response = super().partial_update(request, *args, **kwargs)
+        return Response(response.data, status=status.HTTP_200_OK)
+
+    def destroy(self, request, *args, **kwargs):
+        response = super().destroy(request, *args, **kwargs)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def retrieve(self, request, pk=None):
         """
-        adopter = Adopter.objects.get(user=request.auth.user)
-        adopter.user.last_name = request.data["last_name"]
-        adopter.last_name = request.data["last_name"]
-        adopter.user.first_name = request.data["first_name"]
-        adopter.first_name = request.data["first_name"]
-        adopter.user.email = request.data["email"]
-        adopter.email = request.data["email"]
-        adopter.user.save()
-        adopter.save()
-        return Response({}, status=status.HTTP_204_NO_CONTENT)
+        Retrieve a single adopter instance.
+        """
+        try:
+            adopter = Adopter.objects.get(pk=pk)
+        except Adopter.DoesNotExist:
+            return Response(
+                {"error": "Adopter not found."}, status=status.HTTP_404_NOT_FOUND
+            )
+
+        serializer = AdopterSerializer(adopter)
+        return Response(serializer.data)
+
+    def list(self, request):
+        """
+        Return a list of all adopters.
+        """
+        adopters = Adopter.objects.all()
+        serializer = AdopterSerializer(adopters, many=True)
+        return Response(serializer.data)
