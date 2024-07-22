@@ -14,8 +14,8 @@ class ApplicationSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         rep = super().to_representation(instance)
-        rep["dog_id"] = DogSerializer(instance.dog_id).data
-        rep["adopter_id"] = AdopterSerializer(instance.adopter_id).data
+        rep["dog"] = DogSerializer(instance.dog).data
+        rep["adopter"] = AdopterSerializer(instance.adopter).data
         return rep
 
 
