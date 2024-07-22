@@ -3,8 +3,8 @@ from .Adopter import Adopter
 
 
 class Adoption(models.Model):
-    dog = models.ForeignKey("Dog", on_delete=models.CASCADE)
-    adopter = models.ForeignKey(
+    dog_id = models.ForeignKey("Dog", on_delete=models.CASCADE)
+    adopter_id = models.ForeignKey(
         Adopter, on_delete=models.CASCADE
     )  # Reference to Adopter model
     adoption_date = models.DateField()
