@@ -11,6 +11,7 @@ class Dog(models.Model):
     story = models.TextField()
     adoption_status = models.CharField(max_length=20)
     arrival_date = models.DateField()
+    image_url = models.URLField()
 
     def __str__(self):
         return self.name
