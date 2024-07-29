@@ -5,3 +5,4 @@ from .adopter import AdoptersViewSet
 from .dog import *
 from .adoption import *
 from .application import *
+from .events import *
