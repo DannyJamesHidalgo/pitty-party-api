@@ -1,0 +1,52 @@
+[
+    {
+      "model": "pittyapi.adopter",
+      "pk": 1,
+      "fields": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@example.com",
+        "user_id": 1
+      }
+    },
+    {
+      "model": "pittyapi.adopter",
+      "pk": 2,
+      "fields": {
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "email": "jane.smith@example.com",
+        "user_id": 2
+      }
+    },
+    {
+      "model": "pittyapi.adopter",
+      "pk": 3,
+      "fields": {
+        "first_name": "Alice",
+        "last_name": "Johnson",
+        "email": "alice.johnson@example.com",
+        "user_id": 3
+      }
+    },
+    {
+      "model": "pittyapi.adopter",
+      "pk": 4,
+      "fields": {
+        "first_name": "Bob",
+        "last_name": "Williams",
+        "email": "bob.williams@example.com",
+        "user_id": 4
+      }
+    },
+    {
+      "model": "pittyapi.adopter",
+      "pk": 5,
+      "fields": {
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "email": "charlie.brown@example.com",
+        "user_id": 5
+      }
+    }
+  ]
