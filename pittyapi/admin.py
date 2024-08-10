@@ -8,7 +8,7 @@ from .models import (
     Adoption,
     Fostering,
     MedicalRecord,
-    PittyParty,
+    Event,
     Application,
 )
 
@@ -17,5 +17,5 @@ admin.site.register(Adopter)
 admin.site.register(Adoption)
 admin.site.register(Fostering)
 admin.site.register(MedicalRecord)
-admin.site.register(PittyParty)
+admin.site.register(Event)
 admin.site.register(Application)

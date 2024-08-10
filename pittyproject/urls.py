@@ -11,6 +11,7 @@ router.register(r"adopters", AdoptersViewSet, "adopter")
 router.register(r"dogs", DogViewSet)
 router.register(r"adoptions", AdoptionViewSet)
 router.register(r"applications", ApplicationViewSet)
+router.register(r"events", EventViewSet)
 
 
 urlpatterns = [

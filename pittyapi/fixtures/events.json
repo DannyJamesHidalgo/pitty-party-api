@@ -1,0 +1,32 @@
+[
+    {
+      "model": "pittyapi.event",
+      "pk": 1,
+      "fields": {
+        "name": "Pitty Party Adoption Event",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-1/354451903_632799385548226_4140854274147883325_n.jpg?stp=c9.0.480.480a_dst-jpg_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=1M-pg6lxnuUQ7kNvgHAz-yY&_nc_ht=scontent-atl3-2.xx&gid=A_uJY3B6tdkYPXFeNdDJSfr&oh=00_AYA8oy1nO8VD6r8O-CqlouXF5HbO9J2hc5iRfQ9Kh94reg&oe=66AD8F00",
+        "startDatetime": "2024-07-06T17:00:00Z",  
+        "endDatetime": "2024-07-06T21:00:00Z"  
+      }
+    },
+    {
+      "model": "pittyapi.event",
+      "pk": 2,
+      "fields": {
+        "name": "Pitty Party Adoption Event",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-1/354451903_632799385548226_4140854274147883325_n.jpg?stp=c9.0.480.480a_dst-jpg_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=1M-pg6lxnuUQ7kNvgHAz-yY&_nc_ht=scontent-atl3-2.xx&gid=A_uJY3B6tdkYPXFeNdDJSfr&oh=00_AYA8oy1nO8VD6r8O-CqlouXF5HbO9J2hc5iRfQ9Kh94reg&oe=66AD8F00",
+        "startDatetime": "2024-07-13T17:00:00Z",  
+        "endDatetime": "2024-07-13T21:00:00Z"  
+      }
+    },
+    {
+      "model": "pittyapi.event",
+      "pk": 3,
+      "fields": {
+        "name": "Pitty Party Adoption Event",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-1/354451903_632799385548226_4140854274147883325_n.jpg?stp=c9.0.480.480a_dst-jpg_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=1M-pg6lxnuUQ7kNvgHAz-yY&_nc_ht=scontent-atl3-2.xx&gid=A_uJY3B6tdkYPXFeNdDJSfr&oh=00_AYA8oy1nO8VD6r8O-CqlouXF5HbO9J2hc5iRfQ9Kh94reg&oe=66AD8F00",
+        "startDatetime": "2024-08-03T17:00:00Z",  
+        "endDatetime": "2024-08-03T21:00:00Z"  
+      }
+    }
+  ]
