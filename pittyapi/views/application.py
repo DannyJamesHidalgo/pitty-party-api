@@ -40,7 +40,10 @@ class ApplicationViewSet(viewsets.ModelViewSet):
         response = super().destroy(request, *args, **kwargs)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-    def list(self, request, *args, **kwargs):
+    def list(
+        self,
+        request,
+    ):
         # Check if 'adopter_id' query parameter is provided
         adopter_id = request.query_params.get("adopter_id", None)
         if adopter_id is not None:
