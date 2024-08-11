@@ -1,5 +1,8 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
+from django.views.generic import TemplateView
+from django.conf import settings
+
 from rest_framework import routers
 from pittyapi.views import *
 
@@ -18,4 +21,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path("register", register_user),
     path("login", login_user),
+    re_path(r"^.*$", TemplateView.as_view(template_name="index.html"), name="catchall"),
 ]
