@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 DEBUG = os.getenv("DEBUG", "False")
+# ALLOWED_HOSTS = ["127.0.0.1", "localhost", ""]
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")

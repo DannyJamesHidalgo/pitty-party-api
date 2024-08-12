@@ -25,6 +25,21 @@ class ApplicationViewSet(viewsets.ModelViewSet):
     serializer_class = ApplicationSerializer
 
     def create(self, request, *args, **kwargs):
+        dog_id = request.data.get("dog")
+        adopter_id = request.data.get("adopter")
+
+        # Check if an application already exists for this dog and adopter
+        existing_application = Application.objects.filter(
+            dog_id=dog_id, adopter_id=adopter_id
+        ).first()
+
+        if existing_application:
+            return Response(
+                {"error": "An application already exists for this dog and adopter."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # Proceed with creating a new application if none exists
         response = super().create(request, *args, **kwargs)
         return Response(response.data, status=status.HTTP_201_CREATED)
 
