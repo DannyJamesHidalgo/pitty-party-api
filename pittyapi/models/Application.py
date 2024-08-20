@@ -16,6 +16,9 @@ class Application(models.Model):
     email = models.EmailField(blank=True, null=True)
     adoption_pitch = models.TextField(blank=True, null=True)
     name = models.CharField(max_length=255)
+    question_1 = models.BooleanField(default=False)
+    question_2 = models.BooleanField(default=False)
+    question_3 = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Application for {self.dog.name} by {self.adopter.first_name} {self.adopter.last_name}"
