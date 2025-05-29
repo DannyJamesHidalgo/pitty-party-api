@@ -20,7 +20,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",  # For local development
     "localhost",  # For local development
     ".vercel.app", # Allows all subdomains of .vercel.app (e.g., your-project-id.vercel.app)
-    # ".now.sh",  # Optional: For older Vercel deployments if you still use them
+    "pitty-party-client.vercel.app",  # Your deployed frontend
+    "pitty-party-server.vercel.app",  # Your deployed backend
 ]
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
