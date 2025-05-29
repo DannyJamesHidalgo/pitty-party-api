@@ -1,0 +1,13 @@
+// Example for your API's vercel.json to fix CORS
+{
+  "headers": [
+    {
+      "source": "/login", // Apply to the /login endpoint
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "http://localhost:5173" },
+        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" }, // Include methods you use
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
+      ]
+    }
+  ]
+}
