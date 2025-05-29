@@ -16,7 +16,13 @@ DEBUG = os.getenv("DEBUG", "False")
 # only use this when you need to ren the debugger to test feature
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost", ""]
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = [
+    "127.0.0.1",  # For local development
+    "localhost",  # For local development
+    ".vercel.app", # Allows all subdomains of .vercel.app (e.g., your-project-id.vercel.app)
+    "pitty-party-client.vercel.app",  # Your deployed frontend
+    "pitty-party-server.vercel.app",  # Your deployed backend
+]
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
@@ -44,13 +50,23 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ORIGIN_WHITELIST = (
+# your_project_name/settings.py
+
+# ... (your existing settings) ...
+
+# Replace CORS_ORIGIN_WHITELIST with CORS_ALLOWED_ORIGINS
+CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://pitty-party-client.vercel.app",
-)
+    "http://localhost:5173", # This is the one you need for Vite
+    "http://127.0.0.1:5173", # Also good to include
+    "https://pitty-party-client.vercel.app", # Your deployed frontend
+]
+
+# If you need to allow credentials (e.g., for cookies or auth tokens), also add:
+CORS_ALLOW_CREDENTIALS = True
+
+# ... (rest of your settings) ...
 
 
 MIDDLEWARE = [
