@@ -16,7 +16,12 @@ DEBUG = os.getenv("DEBUG", "False")
 # only use this when you need to ren the debugger to test feature
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost", ""]
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = [
+    "127.0.0.1",  # For local development
+    "localhost",  # For local development
+    ".vercel.app", # Allows all subdomains of .vercel.app (e.g., your-project-id.vercel.app)
+    # ".now.sh",  # Optional: For older Vercel deployments if you still use them
+]
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
