@@ -21,5 +21,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path("register", register_user),
     path("login", login_user),
-    re_path(r"^.*$", TemplateView.as_view(template_name="index.html"), name="catchall"),
+    
 ]
