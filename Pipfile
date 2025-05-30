@@ -1,4 +1,4 @@
-# Pipfile content
+
 
 [[source]]
 url = "https://pypi.org/simple"
@@ -6,14 +6,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==5.2.1" # ADD THIS LINE - make sure this matches your Django version
+django = "==5.2.1"         
 gunicorn = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
-djangorestframework = "*" 
-corsheaders = "*"       
+djangorestframework = "*"  
+django-cors-headers = "*"
+
 
 [dev-packages]
 
+
 [requires]
-python_version = "3.12" 
+python_version = "3.12"    
