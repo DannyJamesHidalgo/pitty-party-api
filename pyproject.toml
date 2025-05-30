@@ -1,0 +1,19 @@
+[project]
+name = "pitty-party-api"
+version = "0.1.0"
+description = "A fun API for pitty parties"
+authors = [
+    {name = "dnnysongs@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gunicorn (>=23.0.0,<24.0.0)",
+    "dj-database-url (>=2.3.0,<3.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
