@@ -1,0 +1,1 @@
+web: gunicorn pittyproject.wsgi
